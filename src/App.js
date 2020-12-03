@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Box, TextField, Button } from "@material-ui/core";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Box
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        width: "40%",
+        height: "650px",
+        margin: "10vh auto",
+        border: "4px solid grey",
+        borderRadius: "10px",
+        padding: "3vh",
+        fontFamily: "revert",
+        color: "darkgrey",
+      }}
+    >
+      <h1>Battery Life Calculator</h1>
+      <h3>Battery Capacity</h3>
+      <TextField variant="standard" type="number" label="mHa" />
+      <h3>Device Consumption</h3>
+      <TextField variant="standard" type="number" label="mHa" />
+      <br />
+      <Button variant="contained">Calculate</Button>
+      <br />
+      <TextField disabled variant="filled" label="Hours" />
+    </Box>
   );
 }
 
