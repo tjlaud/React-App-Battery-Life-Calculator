@@ -23,6 +23,10 @@ function App() {
     setAnswer(calcResult);
   };
 
+  document.addEventListener("keydown", function (event) {
+    event.key === "Enter" && calculate();
+  });
+
   return (
     <Box
       style={{
